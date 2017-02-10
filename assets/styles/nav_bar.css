@@ -1,0 +1,120 @@
+#nav-toggle {
+  display: none;
+}
+
+.content-wrapper {
+  border: 1px solid orange;
+}
+
+.nav {
+    background-color: cyan;
+    width: 30%;
+    min-width: 200px;
+    /* height: auto; */
+    /* float: right; */
+    position: fixed;
+    right: -430px;
+    bottom: 0px;
+    top: 0px;
+    z-index: 0;
+    font-family: Arial;
+    overflow-y: scroll;
+    padding-bottom: 15px;
+    transition: .3s;
+}
+
+.toggle-lable {
+    border: 1px solid purple;
+    border-radius: 20%;
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 10px 10px;
+    cursor: pointer;
+}
+
+.nav-button:before {
+
+}
+
+.nav-button {
+    font-size: 50px;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 1px;
+    transition: transform .3s;
+}
+
+
+.nav-header {
+    border-top: 2px solid white;
+    font-size: 25px;
+    font-weight: bolder;
+    color: white;
+    margin-left: 26px;
+    margin-top: 20px;
+    padding-top: 12px;
+}
+
+.spin-ninety {
+    font-size: 23px;
+    color: white;
+    display: inline-block;
+    float: right;
+    margin: 5px 30px;
+}
+
+.nav-sub-header {
+    /* border: 1px solid orange; */
+    overflow: auto;
+    margin: 10px 30px;
+    width: 92%;
+    /*display: none;*/
+    transition: opacity .3s ease;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.sub-cat {
+    /* float: left; */
+    font-size: 20px;
+    font-weight: lighter;
+    margin: 8px 15px 0px 0px;
+    padding-top: 10px;
+    border-top: 1px solid white;
+}
+
+.article-wrapper {
+  border: 1px solid red;
+  z-index: 0;
+}
+
+.place-holder-txt {
+  color: blue;
+  border: 1px solid black;
+}
+
+#nav-toggle:checked+.content-wrapper .nav{
+  right: 0px;
+}
+
+#nav-toggle:checked+.content-wrapper .nav-button{
+  transform: rotate(-45deg);
+}
+
+
+.nav-header:hover .nav-sub-header{
+    opacity: 1;
+    height: auto;
+}
+
+.nav-header:hover .spin-ninety {
+  transform: rotate(90deg);
+  transition: transform .3s;
+}
+
+/*.nav-button:hover, .nav-button:active{
+  transform: rotate(-45deg);
+  transition: transform .3s;
+}*/
