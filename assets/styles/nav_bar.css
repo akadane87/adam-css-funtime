@@ -1,13 +1,67 @@
+/*////////////////   BODY CONTENT - start    /////////////////////*/
+
 #nav-toggle {
   display: none;
 }
 
 .content-wrapper {
-  border: 1px solid orange;
+    border: 1px solid orange;
+    overflow: auto;
+    transition: .3s;
 }
 
+
+.toggle-lable-button {
+    border: 4px solid black;
+    background-color: white;
+    border-radius: 20%;
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 10px 10px;
+    cursor: pointer;
+    position: fixed;
+    right: 100px;
+    transition: .3s;
+}
+
+.plus-x {
+    font-size: 50px;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 1px;
+    transition: transform .3s;
+}
+
+.article-wrapper {
+    border: 1px solid red;
+    z-index: 0;
+    width: 80%;
+    float: left;
+}
+
+.title{
+  font-size: 40px;
+  margin: 20px;
+
+}
+
+.place-holder-txt {
+    color: blue;
+    border: 1px solid black;
+    width: 700px;
+    line-height: 30px;
+    font-size: 20px;
+    margin: 0 auto;
+}
+
+/*////////////////   BODY CONTENT - end    /////////////////////*/
+
+
+/*////////////////   NAV - start    /////////////////////*/
+
 .nav {
-    background-color: cyan;
+    background-color: rgb(64, 64, 64);
     width: 30%;
     min-width: 200px;
     /* height: auto; */
@@ -20,45 +74,24 @@
     font-family: Arial;
     overflow-y: scroll;
     padding-bottom: 15px;
-    transition: .3s;
-}
-
-.toggle-lable {
-    border: 1px solid purple;
-    border-radius: 20%;
-    display: block;
-    width: 50px;
-    height: 50px;
-    margin: 10px 10px;
-    cursor: pointer;
-}
-
-.nav-button:before {
-
-}
-
-.nav-button {
-    font-size: 50px;
-    font-weight: bolder;
-    text-align: center;
-    margin-top: 1px;
-    transition: transform .3s;
+    transition: .3s; /* speed at which it the postion animation will take place */
 }
 
 
 .nav-header {
-    border-top: 2px solid white;
+    border-top: 2px solid;
     font-size: 25px;
     font-weight: bolder;
-    color: white;
+    color: rgba(156, 156, 156, 0.65);
     margin-left: 26px;
     margin-top: 20px;
     padding-top: 12px;
+    transition: .3s;
 }
 
 .spin-ninety {
     font-size: 23px;
-    color: white;
+    color: rgba(156, 156, 156, 0.65);
     display: inline-block;
     float: right;
     margin: 5px 30px;
@@ -69,11 +102,11 @@
     overflow: auto;
     margin: 10px 30px;
     width: 92%;
-    /*display: none;*/
-    transition: opacity .3s ease;
-    opacity: 0;
-    height: 0;
-    overflow: hidden;
+    /*display: none;*/ /* cant animate on display without JS */
+    transition: .3s ease;
+    opacity: 0; /* sets default state to invisable*/
+    height: 0; /* sets the default state to collapsed -- we're animating on height vs display to */
+    overflow: hidden; /* so it wont scroll */
 }
 
 .sub-cat {
@@ -82,39 +115,81 @@
     font-weight: lighter;
     margin: 8px 15px 0px 0px;
     padding-top: 10px;
-    border-top: 1px solid white;
+    border-top: 1px solid;
+    color: rgba(156, 156, 156, 0.65);
+    transition: .3s;
 }
 
-.article-wrapper {
-  border: 1px solid red;
-  z-index: 0;
+/*////////////////   NAV - end    /////////////////////*/
+
+
+
+/*////////////////   STATE and EVENTS - start    /////////////////////*/
+/*///////////////-------------------------------//////////////////////*/
+
+/*----- Toggle Button hover styles-----*/
+.toggle-lable-button:hover {
+  background-color: black;
 }
 
-.place-holder-txt {
-  color: blue;
-  border: 1px solid black;
+.plus-x:hover {
+  color: white;
+}
+/*----------------------------------*/
+
+
+
+/*---- Things that change when the checkbox has a state of "checked" -----*/
+#nav-toggle:checked+.content-wrapper .nav {
+  right: 0px;  /* changes side bar position to be back on the screen */
 }
 
-#nav-toggle:checked+.content-wrapper .nav{
-  right: 0px;
+#nav-toggle:checked+.content-wrapper .plus-x {
+  transform: rotate(-45deg); /* rotates + to x when the checkbox has a state of checked */
+  color: white;
 }
 
-#nav-toggle:checked+.content-wrapper .nav-button{
-  transform: rotate(-45deg);
+#nav-toggle:checked+.content-wrapper .toggle-lable-button {
+    right: 440px;
+    background-color: black;
 }
 
+#nav-toggle:checked+.content-wrapper {
+  padding-right: 100px;
+}
+/*-------------------------------------------------------------------------*/
+
+
+
+
+/*----------------  Nav change in state on hover  ------------------*/
+.nav-header:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.nav-header:hover .spin-ninety {
+  color: white;
+  cursor: pointer;
+}
 
 .nav-header:hover .nav-sub-header{
     opacity: 1;
-    height: auto;
+    height: auto; /* Doesn't work need: need a specified hieght for each drop down but they are all different */
 }
+.sub-cat:hover{
+  color: white;
+  cursor: pointer;
+}
+
+/* Demo for Smooth nav reveal transition */
+/*.nav-header:hover .nav-sub-header{
+  opacity: 1;
+  height: 205px;
+}*/
 
 .nav-header:hover .spin-ninety {
   transform: rotate(90deg);
   transition: transform .3s;
 }
-
-/*.nav-button:hover, .nav-button:active{
-  transform: rotate(-45deg);
-  transition: transform .3s;
-}*/
+/*----------------------------*/

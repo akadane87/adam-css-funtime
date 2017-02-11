@@ -10,10 +10,10 @@
 - Naked AF repo...back to basics
 
 Mantras....
-Biggest Squares first!!!!!!!!
-Put a boarder on it
-Mind your overflows
-(Groups of things that might move together belong in their own box)
+- Biggest Squares first!!!!!!!!
+- Put a boarder on it (or a background-color)
+- Mind your overflows
+- (Groups of things that might move together belong in their own box)
 
 <h3>Selectors vs Psuedo Selectors + Case use:</h3>
 CSS Sushi Selector game http://flukeout.github.io/
@@ -55,12 +55,14 @@ Do mobile/break up CSS in 2 ways:
 
 Example:
   1.) <link rel="stylesheet" media="(max-width: 800px)" href="example.css" />
-  2.)<style>
-@media (max-width: 600px) {
-  .facet_sidebar {
-    display: none;
+  2.)
+
+<style>
+  @media (max-width: 600px) {
+    .facet_sidebar {
+      display: none;
+    }
   }
-}
 </style>
 
 Mobile First....?
