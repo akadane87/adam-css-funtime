@@ -1,0 +1,75 @@
+.example-container {
+  border: 2px solid blue;
+}
+
+
+.box {
+  border: 2px solid black;
+  text-align: center;
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+}
+
+.one {
+  background-color: darkred;
+}
+
+.two {
+  background-color: red;
+}
+
+.three {
+  background-color: orangered;
+}
+
+.four {
+  background-color: orange;
+}
+
+.five {
+  background-color: yellow;
+}
+
+.six {
+  background-color: green;
+}
+
+.seven {
+  background-color: cyan;
+}
+
+.eight {
+  background-color: blue;
+}
+
+.nine {
+  background-color: purple;
+}
+
+
+.example-container-pos {
+  border: 2px solid blue;
+  overflow: auto;
+}
+
+
+.two-column-layout {
+  border: 2px solid cyan;
+}
+
+.nav {
+
+}
+
+.content-left {
+
+}
+
+.content-right {
+
+}
+
+.footer {
+
+}
