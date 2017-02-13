@@ -15,15 +15,24 @@ Mantras....
 - Mind your overflows
 - (Groups of things that might move together belong in their own box)
 
-<h3>Selectors vs Psuedo Selectors + Case use:</h3>
-CSS Sushi Selector game http://flukeout.github.io/
+<h3>Selectors vs Psuedo Selectors</h3>
+CSS Sushi Selector game: http://flukeout.github.io/
+List of Selectors: http://www.w3schools.com/cssref/css_selectors.asp
+Child Selector Game: https://css-tricks.com/examples/nth-child-tester/
+Research specificity on your own (see the calculator) https://specificity.keegan.st/
 Psuedos and Jquery? DOM load order?
 
 <h3>Block vs Inline `&` Positioning</h3>
 (demo block and inline elements , default styles > reset)
-Absolute vs relative
 Floats n Clears
-What's a clearfix? (demo nav + 2 column + footer layout)
+- Take element out of normal flow/order of nodes
+- Overflow vs empty clear div (throw in clipping mask with hidden)
+- What's a clearfix? (demo nav + 2 column + footer layout)
+- Refer to Lynda video
+  http://cssmojo.com/latest_new_clearfix_so_far/
+
+Absolute vs relative
+
 
 <h3>Responsive Elements + Layout:</h3>
 (demo fixed widths vs percentages vs viewport heights/widths)
@@ -40,6 +49,12 @@ div {
   padding-bottom: 100%;
 }
 
+Same as...
+
+div {
+  width: 100vw;
+  height: 100vh;
+}
 
 <h3>Media Queries:</h3>
 Design for Orientation -- Landscape or Portrait
@@ -55,6 +70,7 @@ Do mobile/break up CSS in 2 ways:
 
 Example:
   1.) <link rel="stylesheet" media="(max-width: 800px)" href="example.css" />
+
   2.)
 
 <style>
@@ -75,15 +91,15 @@ Control Landscape:
     }
 }
 
-<h4> Assignment: Make these 4 layouts for each specified width </h4>
-<img src="#" />
-(Refer to absolute + relative positioning boxes)
-
 Why doesn't my site resize on my phone?
+https://akadane87.github.io/portfolio/
+https://akadane87.github.io/dojo/
 <!--<meta name="viewport" content="width=device-width, initial-scale=1"> -->
 https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag
 http://www.kylejlarson.com/blog/iphone-6-screen-size-web-design-tips/
 
+
+<h3> Mobile Nav in strictly CSS (why doe?)</h3>
 
 
 <h3>Challenge: Rebuild this page...</h3>
@@ -93,7 +109,7 @@ How is the nav broken up/ where is there style repitition amongst element relati
 What are the break points?
 What kind of font are they using?
 Can I use their logo?
-What other assets can I steal?
+What other assets can I steal? (make a folder)
 
 (Next coding challenge brand it to the company. That much closer to a company project)
 

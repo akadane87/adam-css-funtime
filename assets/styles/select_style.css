@@ -1,0 +1,218 @@
+/* Cascade example*/
+
+p {
+  color: red;
+}
+
+p {
+  color: green;
+}
+
+p {
+  color: orange;
+}
+
+p {
+  color: cyan;
+}
+
+p {
+  color: blue;
+}
+/*//////////////*/
+
+/*p:before{
+  content: "Dooooood";
+  border-top: 2px solid brown;
+}
+
+p:after {
+  content: "Dooooood";
+  border-bottom: 2px solid brown;
+  font-weight: bold;
+}*/
+
+/* Specificty example (inline styles overide everything) (see specificty calculator in README)*/
+
+.content-wrapper {
+  border: 1px solid black;
+}
+
+.content-wrapper p {
+  color: purple;
+}
+/*/////////////////////*/
+
+
+
+/* nth Child example (see nth child game in README)*/
+
+ol li:nth-child(2){
+  color: blue;
+}
+
+ol li:nth-child(4) ol li:nth-child(2) {
+  color: green;
+}
+/*/////////////////////*/
+
+
+
+
+
+
+.button-wrapper {
+  text-align: center;
+}
+
+
+.dope-button-square {
+    width: 180px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /*border: 1px solid black;*/
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-family: arial;
+    font-variant: small-caps;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+}
+
+.dope-button-square:before {
+    content: "";
+    width: 180px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid black;
+    font-size: 13px;
+    font-variant: small-caps;
+    text-align: center;
+    /* transition: .3s; */
+    -webkit-transform: translate(3px, 3px);
+    transform: translate(3px, 3px);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: .3s;
+  }
+
+.dope-button-square:after {
+    content: "";
+    width: 180px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid black;
+    font-size: 13px;
+    font-variant: small-caps;
+    text-align: center;
+    /* transition: .3s; */
+    -webkit-transform: translate(-3px, -3px);
+    transform: translate(-3px, -3px);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: .3s;
+  }
+
+  .dope-button-square:hover:after, .dope-button-square:hover:before {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+/*------------------*/
+
+
+.dope-button-square-redo {
+    width: 180px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /*border: 1px solid black;*/
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-family: arial;
+    font-variant: small-caps;
+    text-align: center;
+    position: relative;
+    transition: .3s;
+    transition-delay: .3s;
+    margin: 0 auto;
+
+}
+
+.dope-button-square-redo:before {
+    content: "";
+    width: 180px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid black;
+    font-size: 13px;
+    font-variant: small-caps;
+    text-align: center;
+    /* transition: .3s; */
+    -webkit-transform: translate(3px, 3px);
+    transform: translate(3px, 3px);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: .3s;
+  }
+
+.dope-button-square-redo:after {
+    content: "";
+    width: 180px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid black;
+    font-size: 13px;
+    font-variant: small-caps;
+    text-align: center;
+    /* transition: .3s; */
+    -webkit-transform: translate(-3px, -3px);
+    transform: translate(-3px, -3px);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: .3s;
+  }
+
+  .dope-button-square-redo:hover {
+    background-color: black;
+    color: white;
+  }
+
+  .dope-button-square-redo:hover:after, .dope-button-square-redo:hover:before {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+/*-----------------------------------*/
+
+/*THERE ARE NO PARENT SELECTORS IN CSS https://css-tricks.com/parent-selectors-in-css/*/
+
+/* Make a simple drop down menu */
+.drop-down-container{
+
+}
+
+a {
+  cursor: pointer;
+}
+
+.drop-down{
+  background-color: darkgray;
+  width: 150px;
+  height: 200px;
+  color: white;
+}
+
+a:hover { /* Selector?hmm Element?hmm */
+
+}
