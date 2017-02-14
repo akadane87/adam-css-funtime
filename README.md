@@ -15,13 +15,6 @@ Mantras....
 - Mind your overflows
 - (Groups of things that might move together belong in their own box)
 
-<h3>Selectors vs Psuedo Selectors</h3>
-CSS Sushi Selector game: http://flukeout.github.io/
-List of Selectors: http://www.w3schools.com/cssref/css_selectors.asp
-Child Selector Game: https://css-tricks.com/examples/nth-child-tester/
-Research specificity on your own (see the calculator) https://specificity.keegan.st/
-Psuedos and Jquery? DOM load order?
-
 <h3>Block vs Inline `&` Positioning</h3>
 (demo block and inline elements , default styles > reset)
 Floats n Clears
@@ -32,6 +25,14 @@ Floats n Clears
   http://cssmojo.com/latest_new_clearfix_so_far/
 
 Absolute vs relative
+
+
+<h3>Selectors vs Psuedo Selectors</h3>
+CSS Sushi Selector game: http://flukeout.github.io/
+List of Selectors: http://www.w3schools.com/cssref/css_selectors.asp
+Child Selector Game: https://css-tricks.com/examples/nth-child-tester/
+Research specificity on your own (see the calculator) https://specificity.keegan.st/
+Psuedos and Jquery? DOM load order?
 
 
 <h3>Responsive Elements + Layout:</h3>
